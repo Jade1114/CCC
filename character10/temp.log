@@ -1,5 +1,5 @@
 [2023-02-14T12:36:00Z] [INFO] Memory usage is back to normal levels.
-[2023-02-14T12:37:05Z] [WARN] Memory usage exceeed 80% of available memory.
+[2023-02-14T12:36:00Z] [INFO] Memory usage is back to normal levels.       
 [2023-02-14T12:38:12Z] [ERROR] Failed to connect to database server.
 [2023-02-14T12:39:45Z] [DEBUG] Retrying request to external API.
 [2023-02-14T12:40:30Z] [INFO] User admin logged in successfully.
