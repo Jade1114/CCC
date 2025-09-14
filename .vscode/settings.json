@@ -3,6 +3,9 @@
 		"stdio.h": "c",
 		"errno.h": "c",
 		"stdlib.h": "c",
-		"string.h": "c"
+		"string.h": "c",
+		"inttypes.h": "c",
+		"math.h": "c",
+		"cmath": "c"
 	}
 }
