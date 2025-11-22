@@ -2,15 +2,16 @@
 #include <stdlib.h>
 
 /*
-    工厂(Factory) : 生产产品，付给一个初始的产品id和产品价格
-    批发商(wholesaler) : 从工厂获取产品，可能会更新产品和id和价格
-    零售商(Retailer) : 从批发商处获取产品，可能会进一步更新产品的id和价格
+	工厂(Factory) : 生产产品，付给一个初始的产品id和产品价格
+	批发商(wholesaler) : 从工厂获取产品，可能会更新产品和id和价格
+	零售商(Retailer) : 从批发商处获取产品，可能会进一步更新产品的id和价格
 
-    工厂只负责生产产品，并且初始化产品的属性
-    批发商和零售商只能接收工厂提供的产品，并且更新它的属性
+	工厂只负责生产产品，并且初始化产品的属性
+	批发商和零售商只能接收工厂提供的产品，并且更新它的属性
 */
 
-typedef struct {
+typedef struct
+{
 	int id;
 	float price;
 	const char *manufacturer;
@@ -20,7 +21,8 @@ Product *create_product(int id, float price, const char *manufacturer);
 
 const char *get_manufacturer(Product **product_ptrs);
 
-int main(void) {
+int main(void)
+{
 
 	Product *product = create_product(1, 10.0, "hszx factory");
 
@@ -34,21 +36,23 @@ int main(void) {
 
 	// 解引 *
 	printf("Retailer --- Product ID: %d, Price : %.2f, Manuefacturer : %s\n", (*retailer_prooduct)->id,
-	       (*retailer_prooduct)->price, (*retailer_prooduct)->manufacturer);
+		   (*retailer_prooduct)->price, (*retailer_prooduct)->manufacturer);
 
 	const char *manufacturer_info = get_manufacturer(retailer_prooduct);
 
-	printf("Retailer contacted factory through wholesaler: Manufacturer : %s\n", manufacturer_info);
+	printf("Retailer contacted factory through wholesaler: Manufacturer : %s\n\n", manufacturer_info);
 
 	free(product);
 
 	return 0;
 }
 
-Product *create_product(int id, float price, const char *manufacturer) {
+Product *create_product(int id, float price, const char *manufacturer)
+{
 	Product *product = (Product *)malloc(sizeof(Product));
 
-	if (product == NULL) {
+	if (product == NULL)
+	{
 		perror("Failed to allocate memory");
 		exit(EXIT_FAILURE);
 	}
@@ -60,7 +64,8 @@ Product *create_product(int id, float price, const char *manufacturer) {
 	return product;
 }
 
-const char *get_manufacturer(Product **product_ptrs) {
+const char *get_manufacturer(Product **product_ptrs)
+{
 	return (*product_ptrs)->manufacturer;
 	// return (**product_ptrs).manufacturer;
 }
