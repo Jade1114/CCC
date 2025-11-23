@@ -9,7 +9,8 @@
 void addString(char ***array, int *size, char *str);
 void printStrings(char **array, int size);
 
-int main(void) {
+int main(void)
+{
     char **strArray = NULL;
 
     int size = 0;
@@ -19,8 +20,7 @@ int main(void) {
 
     printStrings(strArray, size);
 
-
-    //清除内存空间
+    // 清除内存空间
     for (size_t i = 0; i < size; i++)
     {
         free(strArray[i]);
@@ -31,25 +31,26 @@ int main(void) {
     return EXIT_SUCCESS;
 }
 
-void addString(char ***array, int *size, char *str){
-    char **temp = realloc(*array,(*size+1)* sizeof(char*));
-    
-    if(temp ==NULL){
+void addString(char ***array, int *size, char *str)
+{
+    char **temp = realloc(*array, (*size + 1) * sizeof(char *));
+
+    if (temp == NULL)
+    {
         printf("Failed to allocate memory!\n");
         return;
     }
 
     *array = temp;
 
-    // 分配内存并且复制字符串 
+    // 分配内存并且复制字符串
     (*array)[*size] = malloc(strlen(str) + 1);
     strcpy((*array)[*size], str);
     (*size)++;
-
-
 }
 
-void printStrings(char** array,int size){
+void printStrings(char **array, int size)
+{
     for (size_t i = 0; i < size; i++)
     {
         printf("%s", array[i]);
