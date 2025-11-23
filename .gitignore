@@ -1,0 +1,41 @@
+# 排除所有可执行文件（没有扩展名的文件）
+# 对于常见平台：
+# Linux/macOS: 无扩展名
+# Windows: .exe
+
+# Linux/macOS 可执行文件
+*.out
+*.o
+*.a
+*.so
+
+# Windows 可执行文件
+*.exe
+*.dll
+
+# 编译中间文件
+*.obj
+*.lo
+*.la
+*.lib
+
+# gdb 调试文件
+*.gch
+*.pch
+
+# CMake 构建目录
+/build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# VSCode 配置
+.vscode/
+
+# CLion / JetBrains
+.idea/
+
+# 其他临时文件
+*.tmp
+*.log
