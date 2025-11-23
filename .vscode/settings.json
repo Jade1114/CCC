@@ -1,11 +1,15 @@
 {
-	"files.associations": {
-		"stdio.h": "c",
-		"errno.h": "c",
-		"stdlib.h": "c",
-		"string.h": "c",
-		"inttypes.h": "c",
-		"math.h": "c",
-		"cmath": "c"
-	}
+  "files.associations": {
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "stdio.h": "c",
+    "errno.h": "c",
+    "stdlib.h": "c",
+    "string.h": "c",
+    "inttypes.h": "c",
+    "math.h": "c",
+    "cmath": "c",
+    "time.h": "c"
+  }
 }

@@ -1,8 +1,8 @@
-#include <stdio.h>
-#include <inttypes.h>
 #include <errno.h>
-#include <string.h>
+#include <inttypes.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 
 // 动态数据结构的管理，函数修改指向结构体的指针，轻松添加修改删除节点，不需要返回额外的新的头指针.
