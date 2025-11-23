@@ -13,8 +13,7 @@ int (*myFunctionPointer)(int, int);
 // myFunctionPointer -> int f(int num1,int num2)
 int add(int a, int b);
 
-int main(void)
-{
+int main(void) {
 
     // 指向函数
     myFunctionPointer = add;
