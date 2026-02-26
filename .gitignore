@@ -39,3 +39,7 @@ Makefile
 # 其他临时文件
 *.tmp
 *.log
+
+# 编译输出目录
+bin/
+
